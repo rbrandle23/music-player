@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta charset="UTF-8">
+        <title>Music Player</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300;400&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/a644e5b05c.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="title-container">
+        <h1>Music<i class="fa-solid fa-microphone-lines"></i>Player</h1>
+        <h2>Play a Song!</h2>
+        </div>
+        <div class="music-player-container">
+            <img alt="image" src="https://images.unsplash.com/photo-1494232410401-ad00d5433cfa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8bXVzaWN8ZW58MHx8MHx8&auto=format&fit=crop&w=1000&q=60" class="music-player-icon">
+            <audio controls id="audio">
+                <source src="Blackbird Blackbird - Hawaii.mp3" type="audio/mpeg" id="source">
+                <hr>
+                <source src="Com Truise - Cyanide Sisters.mp3" type="audio/mpeg" id="sourceone">
+                <hr>
+                <source src="Best Coast - The Only Place.mp3" type="audio/mpeg" id="sourcetwo">
+            </audio>
+            <hr>
+            <div class="artist-info">
+                <span>Album Cover</span>
+                <span>Artist</span>
+                <span>Song</span>
+                <span>Play</span>
+            </div>
+            <hr>
+            <div class="track-list">
+                <img alt="artist-image" src="https://f4.bcbits.com/img/a4122411116_65">
+                <span class="artist-name">Blackbird Blackbird</span>
+                <span class="artist-song">Hawaii</span>
+                <button class="play-button" id="playbutton"><i class="fa-solid fa-play" id="play"></i></button>
+            </div>
+            <div class="track-list">
+                <img alt="artist-image" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBUSFRgSFRUYGBgYGBgYGhgYGBgcGBwYHhgcGRoaGBgcIS4lHB4rIRgaJjgnKy8xNTU1GiQ7QDs0Py40NTEBDAwMEA8QHxISHjQkJCs0NDE0NDQ0NDQ0MTQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0MTQxNDQ0NDQ0Mf/AABEIAKgBLAMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAAAQIDBQYEBwj/xABBEAACAQIEAgcECAUCBgMAAAABAgADEQQSITEFQQYiUWFxgZETMqGxB0JScpLB0fAUYoLS4SOyF0NUosLxFjOT/8QAGgEAAwEBAQEAAAAAAAAAAAAAAAECAwQFBv/EACQRAAICAgICAgMBAQAAAAAAAAABAhEDIRIxQVEEIhNxkTIF/9oADAMBAAIRAxEAPwD1wmJm74pjCwnOa6HXheMLiVvHuNpgqXt6iuyBlU5ACQW20JGn6xpNhotc0M0wL/Srgx/y6/4U/ujB9K+EO1Gv6J/dK4S9Do9BvC889b6VsMNqFc//AJ/3SP8A4s4f/pq/rT/uh+OXoD0a8MxmDo/SVSYX/hqo7MzJr32Bjv8AiNT/AOnqfjSWsM/RPKJurmF5kOHdNDiGyphXsPeZnUKvibanuE02GxOcZsttTzmcotOmNNPZ05jDMYzNFzRBodmMMxjc0LwDQ7MYZjG3heKg0Ozd8M0beF4BodmMMxjbxLxhofmMMxjLxbxUwtDrwzRt4l4UGh94XjbwvCg0OvC8beF4UGh14XjbwhQaHXheMvC8KAfeGaNvEJ/KFAPuY4GMjhCwBpE+8laRNvBCfQ1hMf8ASkR/AMDualMLqd7knbfQGbFpgfpde2GojkapPmENvmZrHtBHs8fA7Y8aQYTowmEeob7Lzb9O2dCTZbddkCoXOVRcmW2E4cEF21bl2CdlDCqgso8TzPjOmhh3qMERSzHkP3t4zeMVHbMJZHLSOe1pecG6PtUs9S6puF2Zv7R37y34TwFKYFR7O/8A2rz07T3y39p2DzmGTP4iEYVtjsNSRFCIAoXkP3vNFgUsg8L+usoMLRLMAPM93aZp6aZQB2C05H2at2hwgIQEBCwhFiASLCEAEiwhABIQiwASEWBgA2AhFWABCKYkAFiQgYAAiwEWACRIsIDEiN+Y+Yjojfp84APMURsdEAjRjbx7SNoIT6EtPNPpkxFlw1Mbk1H9Mi+us9LE8s6YutbGu9y3swKaX2Ww62UcrtfWb4ouUiXJR2zFYHhZPWfbkvP+r9JcqlhYW8uUlA7BLvhfAC1nqiy7hPrH73YO7edjnGC2Z/abOHhfC3xB00UbudvAdpmtweASguVBvux94+JkyAIAqgAAWAAAA8BEacc8sp/o1UVH9jXb0gGAhllhwqgC1zrYfGQK22WPDsMEW9tTYn9PCdsRIskaCAhCAxRFMQRW2iAS8DEvFgACLEiwGJAQgICHRIsSAxpjhEjoCEMSKYQGJFhAwAWEIQADCBhAAjW/T5x0a+0GA+KI2OkoAaRNJWkbRrsH0Ne9jl3sbX2vbS/nPJEwr1HKZSXzHN431LHlr2z1szOVaCU2cKALsSe0kknUzaGTinRDjye2VfDuDpS6zWd+3kPuj85YbnujTVW+pjjWHZM23J2y7S0hVSLljRU7oq1u70ipitDvZzs4WLP/AEn5icgcSx4WtyzctF/M/l6w8jaVWWSxYLFjJEhFEWIYkaxjiY0RoBYQhABYQhEAQhFgAsQxYkBiRwjYogAQhCABCEDAAiwhABIQMBAAiNtFiNtBgOjhEiyUANI23kjSNo12LwR1XCgsdgLzKVmLsSe+/jLrpFVKUdDbM6L5ZrkfCZ/FYgoMwRm7cvLxlpEskSqrHqsv9Nv/AHHgd8pVw4dTVQFWvmAuCNPlzltha4dcx97TMByMb10CTZOEvEduQjg94xjYG8lPZUlS0c50mk4ShFME7sS35D5TOFR46ec1uGUhFB3CqD4gASpGaJQYqmNi3klj4l4gMWIY1oCBYdo9YmYdojAdCJnHaPURrVkH1l9RAKHmLIlxCHZ1P9Qi+2T7S+oiCmSQkX8Sn2l/EIfxCfbX1EAJoSH+JT7a+oifxSfbX1gBNFnI/EaQ0NRB5xUx9I6h1PgYDo6oStbjmGD+zNZM5IUJre52G3fOt8Wg3b5xNpdgk30TQvKzE8fw1P36gHL3XPyEibpNhQAxqaHbqN/bFzj7LWKb8P8AhcRRKZulGFH/ADD+B/7Yz/5Xhftt+B/0hzj7H+HJ6f8AC8MSUL9LMMPrP+BoDpbhjsX/AAGHOPsf4Mnp/wAL6DbSgbpbh/5/wxE6V4d2CAPdiFHV0uTYc4c4+w/Dk7pmjiiNjhBGTBoxo9owyl2Hgy3S/EnNTpjkc5GnbYfnOZqmUEnYSTi1JHqlze4sBr9nT9+Mr+M4nIgNtCwv6Skm9DaiqdnPVxGd7XOuth3SThtErna+jHQeF7/OcOEcMc4HKPpY/wBm9m1Q28j2iUou2kLLpL14Lsva0kcZhpvaUq1H9vluSrXIHK1tD3S8w1MsQo5xSjxIg+Sdk/CcGS4c7Lr4nsmhEZTQKABsNI+IEqCELwgMIt4kIgKviXBUqkulkc6k20bvYdvfM9icFXo3LJdR9YbHzG02sW8VGkZta7MA2K01GvwnG7ZjqP32Tb4rgVFwbAoTzUn5HSVVXosw911O97gj0teCN4zgUeDcK45A6S5yxF6MVDa7oNdxc6eks04c68ge8Ea+sJInJKLeiuVDcaafnJqjhYnEqhpAM+ZQedtPM8pWNjUY2GY9tgSfhHGN7Oac60ixp1w2m0lMr6VJ21WlU8SAvzIlpRoOQLplPO5X8iYpUgg2+yoxo658vlOnh69Q+M6MRwx2NwVHjf8ASR18NUoUncFWyqz2sbkgXkykqOiMbaRmuKVl/iVcDVGRS3aVe59NptsQdDPKmxTG+mp+cvW6U1WULlTYa632nHO5dnp5PiOoqPgl6QnQW+0flOenVTIoYjYbyvxOLep72vynOQZKWqOqOOopMs8RUW247tZzrVX7QnGwNtpCt+yNRNYw0XBdCNWF+WsapUKHDbNlYXvYkXU+BsfSV6A9hk+Epks9Ox/1EIH3x1kPqLf1QSRMo0rs6Grp2iS4GqvtE6w99P8AcJXUaRtqJ2YSmfaIbAddP9wjSSZM0uL/AEewiOEaI6diPm2DRjR7SNo0HgyeOXLUcE7MfQ6iVvF1zUm7tfQybpHxE067jJfbW+/VGtrSsp8U9ocjIAGuL3PZpOiMX2jGT8HPgFKrc8z8IlfDGoRa+bYAC95bcL4ctVHS9qoQmmdLBrWBIO+tt+2Y3gnSvEsTSaoUqKCLBUHWG493fTUd0Ubcm0ze6goyVm54XwKowVnOQLoARd7d/YJqsHhFpjvO5Pynk/FON4oswNdwRlWynKNQC2igDnO3hfH2BFOqxOVRZySdTsGv85c8Uq5dkxak66PRcRxSml7HMRyXbwvtOepxq31Br3/4lHUTaw0sp/Zk4p69w/YnOmazgktFi3HiDbINh9Y/pA8UqPcKFXblfUnvlUVub8+c66fVFz5dv75ecUmKKJmxLFrlieX7EnHEGXUnQdtvSVjPrecFbFHN3Lr49n775mk2zoWNM1WC4mtS4IK5Ta+4JtrO5aqts0xvD6xCi57Se0kn9ZaJVvrK5NMzliSZobwJmeXiLL7gJ8fdllQ4iCL1BkPw8ufrKUkZSg0d8DEVgdiD4GEozpgygixFweR2kaUEX3VA+7p8pJCIDlqoVudwOYkS1gZYCcdfALqUFj2cifymUoejSMl5Ge0E5cbXWxQ8wQR4jacuOxfsUZ2FsoJsd+4eszOA4yajKrnUuDfzvOfI2lSOzDhcvsvBSGlbMOaGx9SD8Y7D7TqqrmqVOx0Zx8H/APFpx0zYE2/f7EjtHsRdo6gIpE5Riu74xTiu74yaYcWTsbbmcb1srW3EStWzcrTmcayoouK9lhTxIOxk4qlSrjdSCPEEH8pTiSpUIGhMdCcLLaqt6jhNQWYi3ZctFw/vp99f9wkPCq49ojdj2PgdPzmhxNNGIN9Qw7+Y2i8nPlfH6v0egCOEaI4TtR8+waRtJGkbmNB4Mj0swgDq51DrlI71/wAH4SiTDKturbvN799r+U9Br0Q1jpcdovKviPBjVBvY6ECxINz3zTk0tFQcW/sUfC6hp1Fflex8Dof33TEdMuDew4ldOquIZKiEDZmYK4H9Vz4MJr8F0Nqs7Go2RARYqbs3PqnkOWuss+m3B1enRxAGuFY1Lk65AhzDMd9VQ+UiDlu0bZFBSVOzzCrxRXqurH3q7Kp7QXKi/oJPWSzuOWcgeA2mZ4euZ6VxqagY6b26x+RnXwviX+mC5LWzAtzXa2Y9mu87ceStM55w3o23CeMmmVp1DdLizc1A7f5flNalUECxBD7EbHnPNBVueVrH0tO/gXF3pVLMS1NRqt9Qb7r390WXDy+0QhkrUjcO/XygX1AEixFbM1gdBoPLnCjiUdTWUggjqnnc6eo19JHh6DOeqpPfsPWcUlXZ2RjHsSvWyqRzP+bzjFJm0Uam3hLbDYRahJbkbenOd1OkF90ActN7QuhvIo9FfgOHNoTtsL6bfEy8p4VVHbGVNAD2GZvpt0vXAp7Onleu4uAdVRTs7C+t+S899pFOTpGMpt7Zace47hsEuaq4UnVUHWdvuoNSO/Qd8wHFfpGeppQohV+1UN28SqkAepmIxGLqV3zuS9RyOswzMTsBr47DSWFDgjtnLut1DZSrBhnW10Y/VtcToWOMdshKU+kPxvSfE1HFT2mVhzSyi40B02NrDflLjh30k4+kAGanWX+det+JCD6gypqcOopWKlSyeyd1uxBDpmDAkb9ZT6yTHcBRRdWYEKSRcPmPVVQNBYl2K2udpXKPot4Ztd3R6LwP6UcLVITEK2HY6Zic1K/39Cvmtu+b6m6sAykMrC4ZSCCO0EaET5mx3DalH3hmUXGZbldDY6/VF7jXe0uOinTLEcPOVTnok9am9yq66lNeqfgeyJxTVxMHBp09H0IItph6H0gB1VhRuDrcNy7tJadH+k4xLtTdQjalLE2ZezX60x5K6Nn8bIo8mtFnxvhS4qmabEqTazDcEajxF+UwA4DUwtS9UdVVZldT1WOygHcG5Gk9QkGLwiVVyOLjTxB5Ed8mcOS12Vh+TLHrweZ4xfZ16WbbKit4EWb4OZXopR2Q9pXzB2lz0nwro7ZhuSVa2hHK3wEreJL1w42qKlXwLDrf9waclNKmeximpJP2jirJlPdyjDLCsQUuw2007dv1nExX+b4RJ2dEWRXkbzpppnYIqszE2AUXJ8ABNPgugz1FD1HCE/VtmYL3nQAzSMG+kZz+Rjx/6dGNELz0U9A6Fv8A7Kt+2629Ms7uHdEcNRObKXPL2mVgOdwtrAzRYpGEv+jhS1bMRwbo/iK7B0TIv2nuoO3u6XPja012E6J2IarVvbXKugv94628pqLcoulposUUeZm+bkyPWkSiOEaI4SjlYNIqklaRvBdg+hhhaLElEiSPE4ZaqPScXV1ZCP5WFj8DJYsYHzi+AbC4hqTXzUhib3/kR1B89DKzhWqV1O3sdPvGrTUH4z0v6TuCsmIOLXRamGqq57GVcvmWVh+Gef8ACEX2ddiLk+wS5/mrK23hT+Mo1uww2Iek7UirOi6GwJymwv5b6TTYbAn2JqlgoZyABcswRQSR3XYDxmb4pic9aoVFlztZV2yhiw0HkPOaCpWNF6dEdZaFKmrqOeIds5AvzLOPEIZtDM0qZMsd9GiwdRcHSU2zH69ySC5B6oXkVG58uc01DFBk7CVBK/WFxex9ZiaFdKtTMGDU6Gl+T1b8/Egn7qCdWGxLe09pmIC3LX2Y/ZPdc/OKWLnvyTHK4aZsaaZbD1850qmo9f0lTgOJrUBa1mAGZT8LeMtsPUzKG5nX9/vnOOcWnTN072c/HuIphsO9d9kUm3Nm2VR3lrCeCY3FvWqPVqNd3YsTy8B3DYdwnpP0r421KjhlYddy7juQWXyzNfyE8vc6/Lw2E3wx+tmUnsuOGVKSopLIjKzM5IvV0OZPZEg22sbd84sTxR6gygKgJLMEBXMzCxLa66cttZymmfC/aQPnDJ3jyuZqoq7KeWTjxWhhYnUm579ZPh8ZUpm6Oym1tDy8DpIih/f5wjaTIUpLaZp8DxdKila3UIUEgEBHUAiwBOnVOovrl01mdxNRC7FFyqTop1t22vyvt2SCEUYqL0XPK5pJl10exhV/ZE6Ncr3Nvbzmpw9Yo6uuhVgw8jf/ABPP6blSHH1SD6a/lN7jUygVEvkYAi+4uLi5E5PkQp8kep8HLzi8cj07gfHBVb2THr2zKeToQCCOxhexHdLyeMBmaitRWIei2UkE3Ct1kN+5swnoHRrpKK62qKVZAoLbhieZ5g6SYT8M5vlfFcLlHryW3G+FriqZQ6MNVbsbl5dswPF+G1KVFA62Ku1K41zIbspU8xuJ6cjgi4IIPMbRHpq1rgGxuLgGx7Y5QUjDD8iWPXaPNcF0dxFZEATKCMxZ9B6bkm99pZYXoMdPaVtb6hFv1fFtj32m4EUiKOGKLl87K+tFdwvgtHDD/TQA/aOrH+o/lLKEJolRySlKTuTsIQhGIIWhCAEi7DwjhGLsPAR4klA0jeSNI2guwfQ2JFMSUSLAQhADPdO8E1fAV0QAuELqNycvWIHiqkT58weIC0nF/eq0T5KHP5z3LiVYYXitNzomKpCk19s6tZb+ZUf1TxrpXwVsJjqmFAOU1A1MAalHN0AHMi+XxE1qkNS2cnDXDV1dvdVvaN3qpzkedgPOdr8XJDuTd3d6l+ftHuF1/lUt5tPSOh/0d0adLPjKeeo5ByFmARQdFOU6k/WGo5TSv0M4e1r4Slob9UEa99jqO6S2i+Ts8Z4bxA0kSlTAJLC4+0zWGvkAL9gmobFIRlQgldHF9Q43Hrf1M9LpdHsIgsuGojkLIoPkbX5zM1Po1w4c1KVetTuxbL1GUE8hcXsOwmaQnxZM6kZ6lUa62NtcxI30sD+nmZqOG48HVzbkvYTvp390hxHQt1uUqq/8pUqbDle5B1+c58T0XxblR1Aug98XUd9vyvtCajN9jhLiqMr9ItTNWpludPTf7bageXaJkKDgk5nKC2hNzroNh3Gbb6TOFVKXsKrlWUXpLlvfQB7tfmTn9JgmW2kIqlQNpux701Gz3PZY6+ciEdDbx+UpEtnsf0adF8HWwS16lJK1R2cOXGbJlqMoRQfd0APab+E8y6U8PpYfGV6FJiUR8qG+awyqxW/PKSVv3TiwfEq9AMKVapTD+8EdlDeIU7985IlFp3Yh2Udo89PnJaWGBViWykbAC+bzG3+ZBCNjTofkNj394nqfC8AWwtEsLhqKXB+4J5UFJ0G5IAHedAPUz3fAYUJSSiPqIifhUD8pz/JekjfBkcHaKHh/CAHanm6lVSliNm95DfnZhbzk/A09mr07EkEsTbn7pHlaW9bh4sG+spvp27j42hjsKWYVF6ucBj3Nswt+95jGKa2b5c8pur15OalxZ8Pd1Nx9g+6f0PeJcYHpfQcAVL02PIgsvkwHzlPxRaZQC4uPdtqfPujkwy5VcKFJUE+k3hx47ODK3y+ptMPiEqDMjBh2qf3aS2mNouym6XB7QZfUuJmwzKD3jSKSoIuy0hIqGJV9jY9h3/zJrRDEvCBEICCELTnq4pFNiw59/wAtoAdabDwjxGIdB4CPEkoGkbQhGuw8DYQhGSEIQgBjPpI4a9WnQqIQClXVuwEXBtzsUXScGI4q9R/aAKj5QpdVGcgagF7Xtck221hCVJukdXx4J22S1uM1XGXPlFrHKN/E7+lpyUqpWxUkHuJHfCEk6fxxRKcS/wBtvxH1jxjKl7h20t9Y/KEIiHFFjgePOujjMO0WB8+RktTpMii5R97biEJUezHLBJNooOlvEUxuGqYfIQeq9Nri+dTcXHIEXHnPInTTsI0PdCE6UcUWyRVGmgIsbnW4NtfC3ZIWG3gL9x2tCES7NWNhCEZJPQo3PW0A110v+9PWMcC9lv3+MIRLs0a+prPo16P/AMXi1dlvRoWqOeTN9RfEnreC989rfhi3upK924P6QhMMm+yIsrsZTqIcq0ywP1xqPQazPms9VK1Fwc6EulhYHLo6jt01tCEUEtlSk1RycHYVGCfV3v3aXmiqIIQhLsc/BGlO2vZHe1tCEDJ66JEe8f7d1HUdu3eEJPkrtbGrUcnMXbXvPLvktKs5N8x07zCEAXQ81TfVj6mQ1CtrkgQhEh+TTUj1V8B8pJCEXkD/2Q==">
+                <span class="artist-name">Com Truise</span>
+                <span class="artist-song">Cyanide Sisters</span>
+                <button class="play-button" id="playbuttonone"><i class="fa-solid fa-play" id="play"></i></button>
+            </div>
+            <div class="track-list">
+                <img alt="artist-image" src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8e/Theonlyplace.jpg/220px-Theonlyplace.jpg">
+                <span class="artist-name">Best Coast</span>
+                <span class="artist-song">The Only Place</span>
+                <button class="play-button" id="playbuttontwo"><i class="fa-solid fa-play" id="play"></i></button>
+            </div>
+        </div>
+        <footer>
+            <h2>I DO NOT OWN ANY OF THIS MUSIC!</h2>
+        </footer>
+        <script src="player.js"></script>
+    </body>
+</html>

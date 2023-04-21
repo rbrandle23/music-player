@@ -1,0 +1,116 @@
+* {
+    font-family: 'Dongle', sans-serif;
+}
+body {
+    margin: 0px;
+    padding: 0px;
+    height: 100vh;
+    width: 100%;
+    background-color: #BE9FE1;
+    text-align: center;
+}
+@media (max-width: 390px) {
+    body {
+        margin: 0px;
+        padding: 0px;
+        height: 100vh;
+        width: 50%;
+    }
+    .title-container {
+        background-color: black;
+        color: white;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 0px;
+        padding-bottom: 35px;
+        width: 85%;
+        height: 25%;
+        border-radius: 4px;
+    }
+    .music-player-container {
+        margin: 10px auto;
+        padding: 10px 10px;
+        width: 80%;
+        height: 70%;
+        background-color: white;
+        border-radius: 4px;
+    }
+}
+.title-container {
+    background-color: black;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 0px;
+    padding-bottom: 35px;
+    width: 85%;
+    height: 25%;
+    border-radius: 4px;
+}
+.music-player-container {
+    margin: 10px auto;
+    padding: 10px 10px;
+    width: 80%;
+    height: 70%;
+    background-color: white;
+    border-radius: 4px;
+}
+.music-player-icon {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #BE9FE1;
+    border-radius: 50%;
+    margin-right: 25px;
+}
+.track-list {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 5px;
+}
+img {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #BE9FE1;
+    border-radius: 50%;
+    margin-right: 25px;  
+}
+h1 {
+    font-size: 55px;
+}
+p {
+    font-size: 30px;
+}
+.artist-info {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 5px;
+}
+.artist-name {
+    font-size: 25px;
+    margin-top: 10px;
+}
+.artist-song {
+    font-size: 25px;
+    margin-top: 10px;
+}
+.play-button {
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background-color: rgb(217, 216, 216);
+}
+.play-button #play {
+    text-align: center;
+    padding: 5px 5px;
+}
+footer {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    width: 85%;
+    height: 20%;
+    background-color: black;
+    color: white;
+    border-radius: 4px;
+}
